@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Integer Quest</title>
+  </head>
+  <body>
+    <script>
+      var integer = 0;
+      var integer_inc = function() {
+        integer = integer + 1;
+      };
+      var generate_the_entire_damn_webpage = function() {
+        return "<p>INTEGER QUEST</p><p>You have " + integer + " integers!!!!!!!<p>";
+      };
+      var incr_one_and_gen = function() {
+        integer_inc();
+        document.body.innerHTML = generate_the_entire_damn_webpage();
+      };
+      document.write('<p>INTEGER QUEST</p>');
+      window.setInterval(incr_one_and_gen, 1);
+    </script>
+  </body>
+</html>
